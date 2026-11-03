@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://epochbin.github.io/sitemap.xml
