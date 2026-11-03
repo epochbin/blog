@@ -5,6 +5,13 @@
 <description>我的博客</description>
 <language>zh-CN</language>
 <item>
+<title>今日菜</title>
+<link>https://epochbin.github.io/posts/今日菜.html</link>
+<guid isPermaLink="true">https://epochbin.github.io/posts/今日菜.html</guid>
+<pubDate>Tue, 03 Nov 2026 06:37:00 GMT</pubDate>
+<description>诶嘿 吃酸萝卜，好吃</description>
+</item>
+<item>
 <title>第一篇blog</title>
 <link>https://epochbin.github.io/posts/第一篇blog.html</link>
 <guid isPermaLink="true">https://epochbin.github.io/posts/第一篇blog.html</guid>
