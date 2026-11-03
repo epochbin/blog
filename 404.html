@@ -143,15 +143,19 @@ html[data-theme=dark] .md .hl-k,html.dark-fallback .md .hl-k{color:#c678dd}
 .post-foot .shares{display:flex;gap:9px;flex-wrap:wrap}
 .post-foot .meta a{color:var(--ink3);letter-spacing:.04em;border-bottom:1px solid transparent}
 .post-foot .meta a:hover{color:var(--accent);border-color:var(--accent)}
-/* ---------- 评论 ---------- */
-.cmt{margin:54px 0 0;padding-top:24px;border-top:1px solid var(--rule)}
-.cmt-h{font-family:var(--serif);font-size:19px;font-weight:600;margin:0 0 16px;letter-spacing:.02em;color:var(--ink);display:flex;align-items:baseline;gap:10px}
-.cmt-h em{font-family:var(--sans);font-style:normal;font-size:10.5px;font-weight:400;color:var(--ink3);letter-spacing:.14em;text-transform:uppercase}
-.giscus-box{min-height:150px}
-.giscus-box .giscus{display:block}
-.cmt-tip{margin:14px 0 0;font-size:12px;color:var(--ink3);line-height:1.75;letter-spacing:.02em}
-.cmt-tip a{color:var(--ink3);border-bottom:1px solid var(--rule)}
-.cmt-tip a:hover{color:var(--accent);border-color:var(--accent)}
+.cmt{margin:56px 0 0}
+.cmt-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:0 0 18px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+.cmt-head h2{font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--ink3);margin:0}
+.cmt-head span{font-size:10.5px;color:var(--ink3);letter-spacing:.16em;text-transform:uppercase;opacity:.75}
+.giscus-wrap{background:#fff;border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+[data-theme="dark"] .giscus-wrap{background:#0d1117;border-color:#30363d}
+.giscus-box{min-height:140px}
+.giscus-box iframe{display:block;width:100%;animation:gFade .55s ease both}
+@keyframes gFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.cmt-foot{margin-top:14px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.cmt-mail{display:inline-flex;align-items:center;height:34px;padding:0 14px;border-radius:17px;border:1px solid var(--rule);font-size:12.5px;color:var(--ink2);text-decoration:none;letter-spacing:.04em;white-space:nowrap;transition:border-color .2s,color .2s}
+.cmt-mail:hover{border-color:var(--accent);color:var(--accent)}
+.cmt-tip{margin:0;font-size:12px;color:var(--ink3);line-height:1.7;letter-spacing:.02em}
 .share-btn{height:34px;padding:0 14px;border-radius:17px;border:1px solid var(--rule);font-size:12.5px;color:var(--ink2);background:transparent;cursor:pointer;letter-spacing:.04em}
 .share-btn:hover{border-color:var(--accent);color:var(--accent)}
 .prevnext{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:46px 0 0}
