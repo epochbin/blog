@@ -2,5 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://epochbin.github.io/index.html</loc></url>
 <url><loc>https://epochbin.github.io/archive.html</loc></url>
+<url><loc>https://epochbin.github.io/posts/第一篇blog.html</loc><lastmod>2026-11-03</lastmod></url>
 <url><loc>https://epochbin.github.io/posts/demo.html</loc><lastmod>2026-11-03</lastmod></url>
+<url><loc>https://epochbin.github.io/tags/折腾.html</loc></url>
+<url><loc>https://epochbin.github.io/tags/随笔.html</loc></url>
 </urlset>

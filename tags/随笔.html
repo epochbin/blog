@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>#随笔 · 我的博客</title>
+<meta name="description" content="标签 随笔">
+<meta property="og:title" content="#随笔 · 我的博客">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://epochbin.github.io/tags/随笔.html">
+<link rel="alternate" type="application/rss+xml" title="我的博客" href="../rss.xml">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{--bg:#fdfdfc;--fg:#1c1c1e;--fg2:#71717a;--line:#e8e8ec;--card:#fff;--accent:#ffffff;--code:#f4f4f6}
+@media (prefers-color-scheme:dark){:root{--bg:#131316;--fg:#e8e8ec;--fg2:#8e8e99;--line:#26262d;--card:#1a1a1f;--code:#212127}}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.8 -apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:720px;margin:0 auto;padding:0 22px}
+header.site{border-bottom:1px solid var(--line);padding:26px 0 20px;margin-bottom:38px}
+header.site .wrap{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+header.site h1{margin:0;font-size:21px;font-weight:600;letter-spacing:.01em}
+header.site h1 a{color:var(--fg)}
+header.site .desc{color:var(--fg2);font-size:14px}
+nav.site{margin-left:auto;display:flex;gap:16px;font-size:14px}
+nav.site a{color:var(--fg2)}
+main{min-height:52vh;padding-bottom:70px}
+footer.site{border-top:1px solid var(--line);padding:22px 0;color:var(--fg2);font-size:13px}
+footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+h1.post-t{font-size:29px;line-height:1.35;margin:0 0 10px;font-weight:650;letter-spacing:-.01em}
+.post-meta{color:var(--fg2);font-size:13.5px;margin-bottom:34px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.post-meta .sep{opacity:.5}
+.tag{display:inline-block;font-size:12px;padding:1px 8px;border-radius:20px;background:var(--code);color:var(--fg2)}
+.md{font-size:17px;line-height:1.82;word-wrap:break-word}
+.md h2{font-size:1.42em;margin:1.8em 0 .6em;font-weight:650;padding-bottom:.25em;border-bottom:1px solid var(--line)}
+.md h3{font-size:1.19em;margin:1.5em 0 .5em;font-weight:650}
+.md h4{font-size:1.05em;margin:1.3em 0 .4em}
+.md p{margin:1em 0}
+.md ul,.md ol{padding-left:1.5em;margin:.9em 0}
+.md li{margin:.4em 0}
+.md blockquote{margin:1.3em 0;padding:.5em 1.1em;border-left:3px solid var(--accent);background:var(--code);color:var(--fg2);border-radius:0 8px 8px 0}
+.md img{max-width:100%;height:auto;border-radius:10px;display:block;margin:1.2em auto}
+.md code{background:var(--code);padding:.14em .4em;border-radius:5px;font-size:.87em;font-family:ui-monospace,Menlo,Consolas,monospace}
+.md pre{background:var(--code);padding:15px 17px;border-radius:11px;overflow-x:auto;line-height:1.6;margin:1.2em 0}
+.md pre code{background:none;padding:0;font-size:13.6px}
+.md hr{border:0;border-top:1px solid var(--line);margin:2.4em 0}
+.md table{border-collapse:collapse;width:100%;margin:1.2em 0;font-size:15px;display:block;overflow-x:auto}
+.md th,.md td{border:1px solid var(--line);padding:8px 12px;text-align:left}
+.md th{background:var(--code);font-weight:600}
+.md a{border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+.md del{color:var(--fg2)}
+.list{list-style:none;padding:0;margin:0}
+.list li{padding:0 0 26px;margin:0}
+.list .t{font-size:19px;font-weight:600;line-height:1.5;display:block;color:var(--fg)}
+.list .t:hover{color:var(--accent);text-decoration:none}
+.list .m{color:var(--fg2);font-size:13px;margin:5px 0 7px;display:flex;gap:10px;flex-wrap:wrap}
+.list .s{color:var(--fg2);font-size:14.5px;line-height:1.7;margin:0}
+.archive-year{font-size:15px;font-weight:600;color:var(--fg2);margin:34px 0 12px;letter-spacing:.04em}
+.archive{margin:0;padding:0;list-style:none}
+.archive li{display:flex;gap:14px;padding:7px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.archive .d{color:var(--fg2);font-variant-numeric:tabular-nums;flex:0 0 92px;font-size:14px}
+.empty{color:var(--fg2);padding:60px 0;text-align:center}
+.pager{display:flex;justify-content:space-between;align-items:center;margin:44px 0 10px;font-size:14px;color:var(--fg2)}
+.pager a{padding:8px 14px;border:1px solid var(--line);border-radius:9px;color:var(--fg)}
+.pager a:hover{border-color:var(--accent);text-decoration:none}
+@media (max-width:600px){
+  body{font-size:16.5px}
+  .wrap{padding:0 18px}
+  h1.post-t{font-size:25px}
+  header.site{padding:20px 0 16px;margin-bottom:28px}
+  .list .t{font-size:17.5px}
+}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap"><h1><a href="../index.html">我的博客</a></h1><nav class="site"><a href="../index.html">首页</a><a href="../archive.html">归档</a><a href="../rss.xml">RSS</a></nav></div></header>
+<main><div class="wrap">
+<h2 style="font-size:20px;margin:0 0 26px">#随笔 <span style="color:var(--fg2);font-size:14px;font-weight:400">1 篇</span></h2><ul class="list"><li><a class="t" href="../posts/第一篇blog.html">第一篇blog</a><div class="m"><span>2026-11-03</span></div></li></ul>
+</div></main>
+<footer class="site"><div class="wrap"><span>© 2026</span><span>Powered by <a href="https://pages.github.com">GitHub Pages</a></span></div></footer>
+</body>
+</html>
