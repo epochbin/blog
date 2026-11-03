@@ -4,5 +4,33 @@
 <link>https://epochbin.github.io</link>
 <description>读书、写字，和一些没想明白的问题</description>
 <language>zh-CN</language>
-<lastBuildDate>Tue, 03 Nov 2026 16:42:04 GMT</lastBuildDate>
+<lastBuildDate>Tue, 03 Nov 2026 16:48:35 GMT</lastBuildDate>
+<item>
+<title>把博客搬进一个 HTML 文件</title>
+<link>https://epochbin.github.io/posts/one-html-file.html</link>
+<guid isPermaLink="true">https://epochbin.github.io/posts/one-html-file.html</guid>
+<pubDate>Mon, 02 Nov 2026 13:10:00 GMT</pubDate>
+<description>这个博客现在只有一个文件。 没有数据库，没有后台，没有构建流程。打开它，写，点发布，几秒钟后 GitHub Pages 上就多了一页。 为什么这么折腾 我用过不少博客系统。它们大多要求我先变成一个运维：装环境、配数据库、定期升级、处理证书。 后来我想明白一件事：我要的只是「把想法排成好看的版面」，剩下的都不该由我操心。 于是就有了这个东西。 它怎么工作 正文用 Markdown 写，存在浏览器里。发布时整站被重新生成一遍，只把有变化的文件推到仓库。 图片会压缩后直接传进仓库的 assets 目录，文章里写相对路径就行。 一个文件的博客，听起来像玩具，用起来像笔记本。 代价 当然也有代价： 数据…</description>
+</item>
+<item>
+<title>雨天读书</title>
+<link>https://epochbin.github.io/posts/rainy-day-reading.html</link>
+<guid isPermaLink="true">https://epochbin.github.io/posts/rainy-day-reading.html</guid>
+<pubDate>Wed, 28 Oct 2026 08:40:00 GMT</pubDate>
+<description>下雨天最适合读书，因为哪儿也去不了。 窗外的声音把屋子围起来，字句就格外清楚。平时读不进去的长句子，这时候能一行一行地走完。 最近在读 一本讲城市的书，作者在每一条街上都停下来。 他写一栋楼的门厅、楼梯转角的光、邻居晾在阳台上的衣服。读到一半我抬头看自己窗外，忽然觉得这栋楼也被谁这样写过。 好的描写不是让人看见，是让人想起。 雨停的时候读了三分之一。剩下的留着，等下一场。</description>
+</item>
+<item>
+<title>写不出来的时候</title>
+<link>https://epochbin.github.io/posts/when-words-wont-come.html</link>
+<guid isPermaLink="true">https://epochbin.github.io/posts/when-words-wont-come.html</guid>
+<pubDate>Thu, 15 Oct 2026 14:05:00 GMT</pubDate>
+<description>写不出来的时候，我通常不是没想法，而是想一次说完。 结果每一句都背着下一句的重量，写到第三行就沉了。 后来学乖了：先把最想说的那一句写下来，别的都当注释。 不确定的句子先留着 删掉一半的形容词 写不下去就换个开头 写完之后放一夜。第二天早上还能读下去的，通常就是能留的。</description>
+</item>
+<item>
+<title>最近的几件小事</title>
+<link>https://epochbin.github.io/posts/small-things.html</link>
+<guid isPermaLink="true">https://epochbin.github.io/posts/small-things.html</guid>
+<pubDate>Wed, 30 Sep 2026 12:15:00 GMT</pubDate>
+<description>楼下的桂花开了，走过的时候会突然撞上那股味道。 买了一把旧的木尺，边缘磨得发亮，比新的顺手。 试着在早上写东西，写了两天，第三天起晚了。 没什么大事。记下来只是因为它们发生的时候，我确实停了一下。 &lt;div class=&quot;tip&quot; 注意 ：这段是手工写的 HTML，里面依然能写 Markdown。 &lt;/div</description>
+</item>
 </channel></rss>
