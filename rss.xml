@@ -4,5 +4,12 @@
 <link>https://epochbin.github.io</link>
 <description>Blog</description>
 <language>zh-CN</language>
-<lastBuildDate>Tue, 03 Nov 2026 12:00:02 GMT</lastBuildDate>
+<lastBuildDate>Tue, 03 Nov 2026 12:01:19 GMT</lastBuildDate>
+<item>
+<title>标题</title>
+<link>https://epochbin.github.io/posts/标题.html</link>
+<guid isPermaLink="true">https://epochbin.github.io/posts/标题.html</guid>
+<pubDate>Tue, 03 Nov 2026 11:59:00 GMT</pubDate>
+<description>标题</description>
+</item>
 </channel></rss>
