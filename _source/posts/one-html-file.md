@@ -39,3 +39,4 @@ nothing to commit, working tree clean
 - 没有评论，想说话只能写信
 
 这些我都接受。写作本来就该简单一点。
+
