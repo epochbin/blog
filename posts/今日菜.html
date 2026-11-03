@@ -11,13 +11,33 @@
 <link rel="alternate" type="application/rss+xml" title="我的博客" href="../rss.xml">
 <style>
 *,*::before,*::after{box-sizing:border-box}
-:root{--bg:#fdfdfc;--fg:#1c1c1e;--fg2:#71717a;--line:#e8e8ec;--card:#fff;--accent:#ffffff;--code:#f4f4f6}
-@media (prefers-color-scheme:dark){:root{--bg:#131316;--fg:#e8e8ec;--fg2:#8e8e99;--line:#26262d;--card:#1a1a1f;--code:#212127}}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.8 -apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:var(--fs);line-height:var(--lh);-webkit-font-smoothing:antialiased}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
-.wrap{max-width:720px;margin:0 auto;padding:0 22px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+.wrap.wide{max-width:calc(var(--maxw) + 310px)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:52px;align-items:start}
+.layout.left{grid-template-columns:250px minmax(0,1fr)}
+.layout.left .side{order:-1}
+.side{font-size:14px;color:var(--fg2);position:sticky;top:26px}
+.side section{margin-bottom:30px}
+.side section:last-child{margin-bottom:0}
+.side h3{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--fg2);margin:0 0 11px;font-weight:650}
+.side ul{list-style:none;padding:0;margin:0}
+.side li{padding:5px 0;line-height:1.5}
+.side a{color:var(--fg);font-size:14px;display:block}
+.side a:hover{color:var(--accent);text-decoration:none}
+.side .cnt{color:var(--fg2);font-size:11.5px;font-weight:400;margin-left:5px}
+.side .about{line-height:1.8;font-size:13.8px;margin:0}
+.side .about p{margin:0 0 .6em}
+.side .about p:last-child{margin-bottom:0}
+@media (max-width:860px){
+  .layout,.layout.left{grid-template-columns:minmax(0,1fr);gap:0}
+  .side{order:2;position:static;border-top:1px solid var(--line);margin-top:46px;padding-top:30px}
+  .layout.left .side{order:2}
+  .side section{display:inline-block;vertical-align:top;width:calc(50% - 12px);margin-right:14px}
+}
 header.site{border-bottom:1px solid var(--line);padding:26px 0 20px;margin-bottom:38px}
 header.site .wrap{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
 header.site h1{margin:0;font-size:21px;font-weight:600;letter-spacing:.01em}
@@ -26,32 +46,33 @@ header.site .desc{color:var(--fg2);font-size:14px}
 nav.site{margin-left:auto;display:flex;gap:16px;font-size:14px}
 nav.site a{color:var(--fg2)}
 main{min-height:52vh;padding-bottom:70px}
-footer.site{border-top:1px solid var(--line);padding:22px 0;color:var(--fg2);font-size:13px}
+footer.site{border-top:1px solid var(--line);padding:22px 0;color:var(--fg2);font-size:13px;margin-top:56px}
 footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 h1.post-t{font-size:29px;line-height:1.35;margin:0 0 10px;font-weight:650;letter-spacing:-.01em}
 .post-meta{color:var(--fg2);font-size:13.5px;margin-bottom:34px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .post-meta .sep{opacity:.5}
-.tag{display:inline-block;font-size:12px;padding:1px 8px;border-radius:20px;background:var(--code);color:var(--fg2)}
-.md{font-size:17px;line-height:1.82;word-wrap:break-word}
-.md h2{font-size:1.42em;margin:1.8em 0 .6em;font-weight:650;padding-bottom:.25em;border-bottom:1px solid var(--line)}
-.md h3{font-size:1.19em;margin:1.5em 0 .5em;font-weight:650}
+.tag{display:inline-block;font-size:12px;padding:1px 9px;border-radius:20px;background:var(--code);color:var(--fg2)}
+.tag:hover{text-decoration:none;color:var(--accent)}
+.md{font-size:var(--mdfs);line-height:var(--mdlh);word-wrap:break-word}
+.md h2{font-size:1.4em;margin:1.9em 0 .6em;font-weight:650;padding-bottom:.25em;border-bottom:1px solid var(--line)}
+.md h3{font-size:1.18em;margin:1.5em 0 .5em;font-weight:650}
 .md h4{font-size:1.05em;margin:1.3em 0 .4em}
 .md p{margin:1em 0}
 .md ul,.md ol{padding-left:1.5em;margin:.9em 0}
 .md li{margin:.4em 0}
 .md blockquote{margin:1.3em 0;padding:.5em 1.1em;border-left:3px solid var(--accent);background:var(--code);color:var(--fg2);border-radius:0 8px 8px 0}
-.md img{max-width:100%;height:auto;border-radius:10px;display:block;margin:1.2em auto}
-.md code{background:var(--code);padding:.14em .4em;border-radius:5px;font-size:.87em;font-family:ui-monospace,Menlo,Consolas,monospace}
-.md pre{background:var(--code);padding:15px 17px;border-radius:11px;overflow-x:auto;line-height:1.6;margin:1.2em 0}
+.md blockquote p{margin:.35em 0}
+.md img{max-width:100%;height:auto;border-radius:var(--radius);display:block;margin:1.2em auto}
+.md code{background:var(--code);padding:.14em .4em;border-radius:5px;font-size:.87em;font-family:var(--mono)}
+.md pre{background:var(--code);padding:15px 17px;border-radius:var(--radius);overflow-x:auto;line-height:1.6;margin:1.2em 0}
 .md pre code{background:none;padding:0;font-size:13.6px}
 .md hr{border:0;border-top:1px solid var(--line);margin:2.4em 0}
 .md table{border-collapse:collapse;width:100%;margin:1.2em 0;font-size:15px;display:block;overflow-x:auto}
 .md th,.md td{border:1px solid var(--line);padding:8px 12px;text-align:left}
 .md th{background:var(--code);font-weight:600}
-.md a{border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
 .md del{color:var(--fg2)}
 .list{list-style:none;padding:0;margin:0}
-.list li{padding:0 0 26px;margin:0}
+.list li{padding:0 0 26px}
 .list .t{font-size:19px;font-weight:600;line-height:1.5;display:block;color:var(--fg)}
 .list .t:hover{color:var(--accent);text-decoration:none}
 .list .m{color:var(--fg2);font-size:13px;margin:5px 0 7px;display:flex;gap:10px;flex-wrap:wrap}
@@ -64,20 +85,40 @@ h1.post-t{font-size:29px;line-height:1.35;margin:0 0 10px;font-weight:650;letter
 .pager{display:flex;justify-content:space-between;align-items:center;margin:44px 0 10px;font-size:14px;color:var(--fg2)}
 .pager a{padding:8px 14px;border:1px solid var(--line);border-radius:9px;color:var(--fg)}
 .pager a:hover{border-color:var(--accent);text-decoration:none}
-@media (max-width:600px){
-  body{font-size:16.5px}
-  .wrap{padding:0 18px}
-  h1.post-t{font-size:25px}
-  header.site{padding:20px 0 16px;margin-bottom:28px}
-  .list .t{font-size:17.5px}
-}
+.comments{margin-top:58px;padding-top:34px;border-top:1px solid var(--line)}
+.cmt-h{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--fg2);margin:0 0 20px;font-weight:650}
+@media (max-width:600px){.wrap{padding:0 18px}}
+
+:root{--accent:#d23b2f;--bg:#fff;--fg:#0b0b0c;--fg2:#8a8a8f;--line:#ececec;--card:#fff;--code:#f4f4f4;--radius:4px;
+--font:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;
+--mono:ui-monospace,Menlo,Consolas,monospace;
+--maxw:680px;--fs:17.5px;--lh:1.8;--mdfs:17.5px;--mdlh:1.9}
+@media (prefers-color-scheme:dark){:root{--accent:#d23b2f;--bg:#0b0b0c;--fg:#f0f0f0;--fg2:#8a8a8f;--line:#232324;--code:#171718}}
+header.site{border-bottom:0;padding:30px 0 0;margin-bottom:46px}
+header.site h1{font-size:13.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:700}
+header.site h1 a{color:var(--fg)}
+header.site .desc{display:none}
+nav.site{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase}
+h1.post-t{font-size:clamp(30px,8vw,44px);font-weight:800;line-height:1.16;letter-spacing:-.025em;margin:0 0 18px}
+.post-meta{text-transform:uppercase;letter-spacing:.15em;font-size:11px;margin-bottom:42px}
+.list li{padding-bottom:32px;margin-bottom:32px;border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.list .t{font-size:25px;font-weight:750;letter-spacing:-.02em;line-height:1.26}
+.list .m{text-transform:uppercase;letter-spacing:.15em;font-size:10.5px;margin:9px 0 10px}
+.list .s{font-size:15px;line-height:1.65}
+.md h2{font-size:1.45em;font-weight:750;letter-spacing:-.012em;border-bottom:0;margin-top:2.1em}
+.md h3{font-weight:700}
+footer.site{border-top:1px solid var(--line);margin-top:64px}
+@media (max-width:600px){:root{--accent:#d23b2f;--fs:16.5px;--mdfs:16.5px}.list .t{font-size:21px}header.site{margin-bottom:34px}header.site .wrap{gap:10px}}
 </style>
 </head>
 <body>
 <header class="site"><div class="wrap"><h1><a href="../index.html">我的博客</a></h1><nav class="site"><a href="../index.html">首页</a><a href="../archive.html">归档</a><a href="../rss.xml">RSS</a></nav></div></header>
-<main><div class="wrap">
-<article><h1 class="post-t">今日菜</h1><div class="post-meta"><span>2026-11-03</span><span class="sep">·</span><a class="tag" href="../tags/%E6%97%A5%E5%B8%B8.html">#日常</a></div><div class="md"><p>诶嘿 吃酸萝卜，好吃
-<img src="../assets/mw0bg1jd1yk6.jpg" alt="460" loading="lazy"></p></div></article><div class="pager"><a href="../index.html">← 返回首页</a></div>
+<main><div class="wrap wide">
+<div class="layout"><div class="main-col"><article><h1 class="post-t">今日菜</h1><div class="post-meta"><span>2026-11-03</span><span class="sep">·</span><a class="tag" href="../tags/%E6%97%A5%E5%B8%B8.html">#日常</a></div><div class="md"><p>诶嘿 吃酸萝卜，好吃
+<img src="../assets/mw0bg1jd1yk6.jpg" alt="460"></p>
+</div></article><div class="pager"><a href="../index.html">← 返回首页</a></div></div><aside class="side"><section><h3>最近文章</h3><ul><li><a href="../posts/今日菜.html">今日菜</a></li><li><a href="../posts/第一篇blog.html">第一篇blog</a></li><li><a href="../posts/demo.html">demo</a></li></ul></section>
+<section><h3>标签</h3><ul><li><a href="../tags/日常.html">#日常<span class="cnt">1</span></a></li><li><a href="../tags/折腾.html">#折腾<span class="cnt">1</span></a></li><li><a href="../tags/随笔.html">#随笔<span class="cnt">1</span></a></li></ul></section></aside></div>
 </div></main>
 <footer class="site"><div class="wrap"><span>© 2026</span><span>Powered by <a href="https://pages.github.com">GitHub Pages</a></span></div></footer>
 </body>
