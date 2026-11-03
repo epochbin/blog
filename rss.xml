@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel>
-<title>山间来信</title>
+<title>单文件博客</title>
 <link>https://epochbin.github.io</link>
-<description>读书、写字，和一些没想明白的问题</description>
+<description>一个 HTML 文件的博客生成器，包含全部使用说明</description>
 <language>zh-CN</language>
-<lastBuildDate>Tue, 03 Nov 2026 18:53:59 GMT</lastBuildDate>
+<lastBuildDate>Tue, 03 Nov 2026 18:54:43 GMT</lastBuildDate>
+<item>
+<title>这个博客是怎么回事</title>
+<link>https://epochbin.github.io/posts/what-is-this.html</link>
+<guid isPermaLink="true">https://epochbin.github.io/posts/what-is-this.html</guid>
+<pubDate>Tue, 03 Nov 2026 12:10:00 GMT</pubDate>
+<description>你现在看到的这个站点，是用一个 HTML 文件生成的。 那个文件既是编辑器，也是生成器：打开它写文章，点发布，它把整站重新生成一遍，直接推到 GitHub。GitHub Pages 负责把它变成你能访问的网页。 没有服务器，没有数据库，没有构建流程，也没有 npm install。 它到底怎么跑起来的 三条链： 写 ：文章内容存在浏览器的 localStorage 里。关掉页面不丢，清空浏览器数据才会丢。 生成 ：点发布的时候，所有文章被拼成静态 HTML（首页、归档、标签页、每篇文章、RSS、搜索索引），同时算一遍每个文件的哈希，只上传变化的。 上线 ：生成好的文件通过 GitHub API…</description>
+</item>
+<item>
+<title>把它挂到 GitHub Pages</title>
+<link>https://epochbin.github.io/posts/deploy-to-pages.html</link>
+<guid isPermaLink="true">https://epochbin.github.io/posts/deploy-to-pages.html</guid>
+<pubDate>Mon, 02 Nov 2026 13:30:00 GMT</pubDate>
+<description>从零到能访问，大概十分钟。一共四步。 一、建仓库 打开 github.com，右上角 + → New repository。 名字随意，比如 blog 选 Public （私有仓库的 Pages 要付费，评论也用不了） 不用勾 README，空的就行 建好后仓库地址类似 github.com/你的用户名/blog 二、拿一个 Token 这是唯一有点门槛的一步。 打开 https://github.com/settings/personal access tokens/new Token name ：随便，比如 blog publisher Expiration ：可以选 No expirat…</description>
+</item>
+<item>
+<title>打开评论区</title>
+<link>https://epochbin.github.io/posts/enable-comments.html</link>
+<guid isPermaLink="true">https://epochbin.github.io/posts/enable-comments.html</guid>
+<pubDate>Sun, 01 Nov 2026 11:00:00 GMT</pubDate>
+<description>评论区用的是 giscus，它把留言存进你仓库的 GitHub Discussions。所以不需要任何第三方服务器，也不用注册新账号——留言的人用 GitHub 身份登录就行。 不想用也没关系，先关着。每篇文章底部的「写信给我」一直都在。 三个前提 1. 仓库是 Public 2. 仓库开启了 Discussions 3. 装了 giscus App 前两个在仓库的 Settings → General → Features 里：勾上 Discussions，仓库顶部会多一个 Discussions 标签。 第三个：打开 https://github.com/apps/giscus，Insta…</description>
+</item>
 </channel></rss>
